@@ -1,0 +1,110 @@
+object FrameDataTypes: TFrameDataTypes
+  Size.Width = 320.000000000000000000
+  Size.Height = 480.000000000000000000
+  Size.PlatformDefault = False
+  object ButtonObject: TButton
+    Align = Top
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 250.000000000000000000
+    Size.Width = 300.000000000000000000
+    Size.Height = 30.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'listitembutton'
+    TabOrder = 5
+    Text = 'Send Object'
+    OnClick = ButtonObjectClick
+  end
+  object ButtonMemory: TButton
+    Align = Top
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 210.000000000000000000
+    Size.Width = 300.000000000000000000
+    Size.Height = 30.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'listitembutton'
+    TabOrder = 0
+    Text = 'Send Memory'
+    OnClick = ButtonMemoryClick
+  end
+  object ButtonTBytes: TButton
+    Align = Top
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 170.000000000000000000
+    Size.Width = 300.000000000000000000
+    Size.Height = 30.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'listitembutton'
+    TabOrder = 2
+    Text = 'Send TBytes'
+    OnClick = ButtonTBytesClick
+  end
+  object ButtonTStrings: TButton
+    Align = Top
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 130.000000000000000000
+    Size.Width = 300.000000000000000000
+    Size.Height = 30.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'listitembutton'
+    TabOrder = 6
+    Text = 'Send TStrings'
+    OnClick = ButtonTStringsClick
+  end
+  object ButtonFloat: TButton
+    Align = Top
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 90.000000000000000000
+    Size.Width = 300.000000000000000000
+    Size.Height = 30.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'listitembutton'
+    TabOrder = 1
+    Text = 'Send Float'
+    OnClick = ButtonFloatClick
+  end
+  object ButtonInteger: TButton
+    Align = Top
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 50.000000000000000000
+    Size.Width = 300.000000000000000000
+    Size.Height = 30.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'listitembutton'
+    TabOrder = 3
+    Text = 'Send Integer'
+    OnClick = ButtonIntegerClick
+  end
+  object ButtonString: TButton
+    Align = Top
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 10.000000000000000000
+    Size.Width = 300.000000000000000000
+    Size.Height = 30.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'listitembutton'
+    TabOrder = 7
+    Text = 'Send String'
+    OnClick = ButtonStringClick
+  end
+end

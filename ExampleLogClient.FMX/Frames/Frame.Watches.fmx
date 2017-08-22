@@ -1,0 +1,69 @@
+object FrameWatches: TFrameWatches
+  Size.Width = 320.000000000000000000
+  Size.Height = 480.000000000000000000
+  Size.PlatformDefault = False
+  object LabelInstructions1: TLabel
+    Align = Top
+    AutoSize = True
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 10.000000000000000000
+    Size.Width = 300.000000000000000000
+    Size.Height = 64.000000000000000000
+    Size.PlatformDefault = False
+    Text = 
+      'The Grijjy Log Viewer can show "Live Watches" of data in your ap' +
+      'p. This sample app adds a watch with the number of seconds that ' +
+      'have elapsed since the app started. You can also customize anoth' +
+      'er watch below.'
+  end
+  object LabelInstructions2: TLabel
+    Align = Top
+    AutoSize = True
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 84.000000000000000000
+    Size.Width = 300.000000000000000000
+    Size.Height = 80.000000000000000000
+    Size.PlatformDefault = False
+    Text = 
+      'In the Log Viewer, make sure you have "View | Live Watches" enab' +
+      'led. You can then get a snapshot of live watches by clicking the' +
+      ' "Update" button in the "Watches" panel. Or check "Auto-update" ' +
+      'to refresh the watches every second.'
+  end
+  object LabelCustomWatch: TLabel
+    Align = Top
+    AutoSize = True
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 174.000000000000000000
+    Size.Width = 300.000000000000000000
+    Size.Height = 16.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Custom watch: 0.0'
+  end
+  object TrackBar: TTrackBar
+    Align = Top
+    CanParentFocus = True
+    Frequency = 0.100000001490116100
+    Max = 50.000000000000000000
+    Min = -50.000000000000000000
+    Orientation = Horizontal
+    Margins.Left = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 190.000000000000000000
+    Size.Width = 300.000000000000000000
+    Size.Height = 20.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    OnChange = TrackBarChange
+  end
+end

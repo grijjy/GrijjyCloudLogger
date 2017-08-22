@@ -1,0 +1,65 @@
+object FrameBasic: TFrameBasic
+  Size.Width = 320.000000000000000000
+  Size.Height = 480.000000000000000000
+  Size.PlatformDefault = False
+  object ButtonError: TButton
+    Align = Top
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 90.000000000000000000
+    Size.Width = 300.000000000000000000
+    Size.Height = 30.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'listitembutton'
+    TabOrder = 0
+    Text = 'Send Error message'
+    OnClick = ButtonErrorClick
+  end
+  object ButtonInfo: TButton
+    Align = Top
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 10.000000000000000000
+    Size.Width = 300.000000000000000000
+    Size.Height = 30.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'listitembutton'
+    TabOrder = 3
+    Text = 'Send Info message'
+    OnClick = ButtonInfoClick
+  end
+  object ButtonEnterExitMethod: TButton
+    Align = Top
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 130.000000000000000000
+    Size.Width = 300.000000000000000000
+    Size.Height = 30.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'listitembutton'
+    TabOrder = 2
+    Text = 'EnterMethod / ExitMethod'
+    OnClick = ButtonEnterExitMethodClick
+  end
+  object ButtonWarning: TButton
+    Align = Top
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 50.000000000000000000
+    Size.Width = 300.000000000000000000
+    Size.Height = 30.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'listitembutton'
+    TabOrder = 1
+    Text = 'Send Warning message'
+    OnClick = ButtonWarningClick
+  end
+end

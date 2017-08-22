@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{4F19F9F3-9D19-428C-9B8A-67315F1F8BB0}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="ExampleLogClient.FMX\LogClientFMX.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ExampleLogClient.Console\LogClientConsole.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="LogClientFMX">
+        <MSBuild Projects="ExampleLogClient.FMX\LogClientFMX.dproj"/>
+    </Target>
+    <Target Name="LogClientFMX:Clean">
+        <MSBuild Projects="ExampleLogClient.FMX\LogClientFMX.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="LogClientFMX:Make">
+        <MSBuild Projects="ExampleLogClient.FMX\LogClientFMX.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="LogClientConsole">
+        <MSBuild Projects="ExampleLogClient.Console\LogClientConsole.dproj"/>
+    </Target>
+    <Target Name="LogClientConsole:Clean">
+        <MSBuild Projects="ExampleLogClient.Console\LogClientConsole.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="LogClientConsole:Make">
+        <MSBuild Projects="ExampleLogClient.Console\LogClientConsole.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="LogClientFMX;LogClientConsole"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="LogClientFMX:Clean;LogClientConsole:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="LogClientFMX:Make;LogClientConsole:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

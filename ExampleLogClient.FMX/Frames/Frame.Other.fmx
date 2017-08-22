@@ -1,0 +1,20 @@
+object FrameOther: TFrameOther
+  Size.Width = 320.000000000000000000
+  Size.Height = 480.000000000000000000
+  Size.PlatformDefault = False
+  object Button10000: TButton
+    Align = Top
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 10.000000000000000000
+    Size.Width = 300.000000000000000000
+    Size.Height = 30.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'listitembutton'
+    TabOrder = 6
+    Text = 'Log 10,000 messages'
+    OnClick = Button10000Click
+  end
+end

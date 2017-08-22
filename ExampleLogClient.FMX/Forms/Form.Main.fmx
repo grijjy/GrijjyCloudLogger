@@ -1,0 +1,453 @@
+object FormMain: TFormMain
+  Left = 0
+  Top = 0
+  Caption = 'Example Logging Client'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  object LayoutDetail: TLayout
+    Align = Client
+    Margins.Left = 250.000000000000000000
+    Size.Width = 140.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object ToolBarDetail: TToolBar
+      Padding.Left = 13.000000000000000000
+      Padding.Right = 15.000000000000000000
+      Size.Width = 140.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object LabelDetail: TLabel
+        Align = Contents
+        Size.Width = 140.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'toollabel'
+        TextSettings.HorzAlign = Center
+      end
+      object MasterButton: TSpeedButton
+        Align = Left
+        Position.X = 13.000000000000000000
+        Size.Width = 44.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'detailstoolbuttonbordered'
+        Text = 'MasterButton'
+        TouchTargetExpansion.Left = 5.000000000000000000
+        TouchTargetExpansion.Top = 5.000000000000000000
+        TouchTargetExpansion.Right = 5.000000000000000000
+        TouchTargetExpansion.Bottom = 5.000000000000000000
+        Visible = False
+      end
+    end
+    object TabControlExamples: TTabControl
+      Align = Client
+      Size.Width = 140.000000000000000000
+      Size.Height = 436.000000000000000000
+      Size.PlatformDefault = False
+      TabHeight = 49.000000000000000000
+      TabIndex = 0
+      TabOrder = 1
+      TabPosition = PlatformDefault
+      Sizes = (
+        140s
+        387s
+        140s
+        387s
+        140s
+        387s
+        140s
+        387s
+        140s
+        387s
+        140s
+        387s)
+      object TabItemConnect: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = True
+        Size.Width = 108.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'TabItemConnect'
+        ExplicitSize.cx = 390.000000000000000000
+        ExplicitSize.cy = 49.000000000000000000
+        object LayoutBroker: TLayout
+          Align = Top
+          Padding.Top = 2.000000000000000000
+          Padding.Bottom = 2.000000000000000000
+          Margins.Left = 10.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 5.000000000000000000
+          Size.Width = 120.000000000000000000
+          Size.Height = 37.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          object LabelBroker: TLabel
+            Align = Left
+            Position.Y = 2.000000000000000000
+            Size.Width = 75.000000000000000000
+            Size.Height = 33.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Broker'
+          end
+          object EditBroker: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Client
+            TabOrder = 1
+            Size.Width = 45.000000000000000000
+            Size.Height = 33.000000000000000000
+            Size.PlatformDefault = False
+            OnChangeTracking = EditConnectChangeTracking
+          end
+        end
+        object LayoutService: TLayout
+          Align = Top
+          Padding.Top = 2.000000000000000000
+          Padding.Bottom = 2.000000000000000000
+          Margins.Left = 10.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 47.000000000000000000
+          Size.Width = 120.000000000000000000
+          Size.Height = 37.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          object LabelService: TLabel
+            Align = Left
+            Position.Y = 2.000000000000000000
+            Size.Width = 75.000000000000000000
+            Size.Height = 33.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Service'
+          end
+          object EditService: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Client
+            TabOrder = 1
+            Size.Width = 45.000000000000000000
+            Size.Height = 33.000000000000000000
+            Size.PlatformDefault = False
+            OnChangeTracking = EditConnectChangeTracking
+          end
+        end
+        object LayoutConnect: TLayout
+          Align = Top
+          Padding.Top = 2.000000000000000000
+          Padding.Bottom = 2.000000000000000000
+          Margins.Left = 10.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 89.000000000000000000
+          Size.Width = 120.000000000000000000
+          Size.Height = 37.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          object ButtonConnect: TButton
+            Align = Client
+            Enabled = False
+            Margins.Left = 75.000000000000000000
+            Size.Width = 45.000000000000000000
+            Size.Height = 33.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            Text = 'Connect'
+            OnClick = ButtonConnectClick
+          end
+        end
+      end
+      object TabItemBasic: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 90.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'TabItemBasic'
+        ExplicitSize.cx = 130.000000000000000000
+        ExplicitSize.cy = 49.000000000000000000
+        inline FrameBasic: TFrameBasic
+          Align = Client
+          Size.Width = 140.000000000000000000
+          Size.Height = 387.000000000000000000
+          Size.PlatformDefault = False
+          inherited ButtonError: TButton
+            Size.Width = 120.000000000000000000
+          end
+          inherited ButtonInfo: TButton
+            Size.Width = 120.000000000000000000
+          end
+          inherited ButtonEnterExitMethod: TButton
+            Size.Width = 120.000000000000000000
+          end
+          inherited ButtonWarning: TButton
+            Size.Width = 120.000000000000000000
+          end
+        end
+      end
+      object TabItemDataTypes: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 119.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'TabItemDataTypes'
+        ExplicitSize.cx = 130.000000000000000000
+        ExplicitSize.cy = 49.000000000000000000
+        inline FrameDataTypes: TFrameDataTypes
+          Align = Client
+          Size.Width = 140.000000000000000000
+          Size.Height = 387.000000000000000000
+          Size.PlatformDefault = False
+          inherited ButtonObject: TButton
+            Size.Width = 120.000000000000000000
+          end
+          inherited ButtonMemory: TButton
+            Size.Width = 120.000000000000000000
+          end
+          inherited ButtonTBytes: TButton
+            Size.Width = 120.000000000000000000
+          end
+          inherited ButtonTStrings: TButton
+            Size.Width = 120.000000000000000000
+          end
+          inherited ButtonFloat: TButton
+            Size.Width = 120.000000000000000000
+          end
+          inherited ButtonInteger: TButton
+            Size.Width = 120.000000000000000000
+          end
+          inherited ButtonString: TButton
+            Size.Width = 120.000000000000000000
+          end
+        end
+      end
+      object TabItemTracking: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 109.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'TabItemTracking'
+        ExplicitSize.cx = 78.000000000000000000
+        ExplicitSize.cy = 49.000000000000000000
+        inline FrameTracking: TFrameTracking
+          Align = Client
+          Size.Width = 140.000000000000000000
+          Size.Height = 387.000000000000000000
+          Size.PlatformDefault = False
+          inherited ButtonDeallocateMem: TButton
+            Position.Y = 388.000000000000000000
+            Size.Width = 120.000000000000000000
+          end
+          inherited ButtonAllocateMem: TButton
+            Position.Y = 348.000000000000000000
+            Size.Width = 120.000000000000000000
+          end
+          inherited ButtonDeallocateObjects: TButton
+            Position.Y = 308.000000000000000000
+            Size.Width = 120.000000000000000000
+          end
+          inherited ButtonAllocateObjects: TButton
+            Position.Y = 268.000000000000000000
+            Size.Width = 120.000000000000000000
+          end
+          inherited LabelInstructions1: TLabel
+            Size.Width = 120.000000000000000000
+            Size.Height = 68.000000000000000000
+          end
+          inherited LabelInstructions2: TLabel
+            Position.Y = 88.000000000000000000
+            Size.Width = 120.000000000000000000
+            Size.Height = 114.000000000000000000
+          end
+          inherited LabelInstructions3: TLabel
+            Position.Y = 212.000000000000000000
+            Size.Width = 120.000000000000000000
+            Size.Height = 46.000000000000000000
+          end
+        end
+      end
+      object TabItem1: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 109.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'TabItemWatches'
+        ExplicitSize.cx = 65.000000000000000000
+        ExplicitSize.cy = 49.000000000000000000
+        inline FrameWatches: TFrameWatches
+          Align = Client
+          Size.Width = 140.000000000000000000
+          Size.Height = 387.000000000000000000
+          Size.PlatformDefault = False
+          inherited LabelInstructions1: TLabel
+            Size.Width = 120.000000000000000000
+            Size.Height = 114.000000000000000000
+          end
+          inherited LabelInstructions2: TLabel
+            Position.Y = 134.000000000000000000
+            Size.Width = 120.000000000000000000
+            Size.Height = 114.000000000000000000
+          end
+          inherited LabelCustomWatch: TLabel
+            Position.Y = 258.000000000000000000
+            Size.Width = 120.000000000000000000
+            Size.Height = 23.000000000000000000
+          end
+          inherited TrackBar: TTrackBar
+            Position.Y = 281.000000000000000000
+            Size.Width = 120.000000000000000000
+            Size.Height = 36.000000000000000000
+          end
+        end
+      end
+      object TabItemOther: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 94.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'TabItemOther'
+        ExplicitSize.cx = 78.000000000000000000
+        ExplicitSize.cy = 49.000000000000000000
+        inline FrameOther: TFrameOther
+          Align = Client
+          Size.Width = 140.000000000000000000
+          Size.Height = 387.000000000000000000
+          Size.PlatformDefault = False
+          inherited Button10000: TButton
+            Size.Width = 120.000000000000000000
+          end
+        end
+      end
+    end
+  end
+  object MultiView: TMultiView
+    TargetControl = LayoutDetail
+    MasterButton = MasterButton
+    NavigationPaneOptions.CollapsedWidth = 250.000000000000000000
+    Size.Width = 250.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object ToolBarMain: TToolBar
+      Size.Width = 250.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object LabelMain: TLabel
+        Align = Client
+        Size.Width = 250.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'toollabel'
+        TextSettings.HorzAlign = Center
+        Text = 'Example Log Client'
+      end
+    end
+    object ListBoxExamples: TListBox
+      Align = Client
+      Size.Width = 250.000000000000000000
+      Size.Height = 436.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      DisableFocusEffect = True
+      ItemIndex = 0
+      ItemHeight = 40.000000000000000000
+      DefaultItemStyles.ItemStyle = ''
+      DefaultItemStyles.GroupHeaderStyle = ''
+      DefaultItemStyles.GroupFooterStyle = ''
+      OnItemClick = ListBoxExamplesItemClick
+      Viewport.Width = 246.000000000000000000
+      Viewport.Height = 432.000000000000000000
+      object ListBoxItemConnect: TListBoxItem
+        IsSelected = True
+        Size.Width = 246.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Connect'
+      end
+      object ListBoxItemBasic: TListBoxItem
+        Tag = 1
+        Position.Y = 40.000000000000000000
+        Size.Width = 246.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Basic'
+      end
+      object ListBoxItemDataTypes: TListBoxItem
+        Tag = 2
+        Position.Y = 80.000000000000000000
+        Size.Width = 246.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Data Types'
+      end
+      object ListBoxItemTracking: TListBoxItem
+        Tag = 3
+        Position.Y = 120.000000000000000000
+        Size.Width = 246.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        Text = 'Memory/object Tracking'
+      end
+      object ListBoxItemWatches: TListBoxItem
+        Tag = 4
+        Position.Y = 160.000000000000000000
+        Size.Width = 246.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 5
+        Text = 'Live Watches'
+      end
+      object ListBoxItemOther: TListBoxItem
+        Tag = 5
+        Position.Y = 200.000000000000000000
+        Size.Width = 246.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        Text = 'Other'
+      end
+    end
+  end
+end

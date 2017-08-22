@@ -1,0 +1,113 @@
+object FrameTracking: TFrameTracking
+  Size.Width = 320.000000000000000000
+  Size.Height = 480.000000000000000000
+  Size.PlatformDefault = False
+  object ButtonDeallocateMem: TButton
+    Align = Top
+    Enabled = False
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 288.000000000000000000
+    Size.Width = 300.000000000000000000
+    Size.Height = 30.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'listitembutton'
+    TabOrder = 3
+    Text = 'Deallocate 10MB'
+    OnClick = ButtonDeallocateMemClick
+  end
+  object ButtonAllocateMem: TButton
+    Align = Top
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 248.000000000000000000
+    Size.Width = 300.000000000000000000
+    Size.Height = 30.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'listitembutton'
+    TabOrder = 4
+    Text = 'Allocate 10MB'
+    OnClick = ButtonAllocateMemClick
+  end
+  object ButtonDeallocateObjects: TButton
+    Align = Top
+    Enabled = False
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 208.000000000000000000
+    Size.Width = 300.000000000000000000
+    Size.Height = 30.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'listitembutton'
+    TabOrder = 2
+    Text = 'Deallocate some objects'
+    OnClick = ButtonDeallocateObjectsClick
+  end
+  object ButtonAllocateObjects: TButton
+    Align = Top
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 168.000000000000000000
+    Size.Width = 300.000000000000000000
+    Size.Height = 30.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'listitembutton'
+    TabOrder = 5
+    Text = 'Allocate some objects'
+    OnClick = ButtonAllocateObjectsClick
+  end
+  object LabelInstructions1: TLabel
+    Align = Top
+    AutoSize = True
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 10.000000000000000000
+    Size.Width = 300.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    Text = 
+      'You can allocate and deallocate memory and object here, and watc' +
+      'h for changes in the Grijjy Log Viewer.'
+  end
+  object LabelInstructions2: TLabel
+    Align = Top
+    AutoSize = True
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 52.000000000000000000
+    Size.Width = 300.000000000000000000
+    Size.Height = 64.000000000000000000
+    Size.PlatformDefault = False
+    Text = 
+      'In the Log Viewer, make sure you have "View | Live Watches" enab' +
+      'led. You can then get a snapshot of live objects and memory by c' +
+      'licking the "Update" button in the "Memory Usage" panel.'
+  end
+  object LabelInstructions3: TLabel
+    Align = Top
+    AutoSize = True
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 126.000000000000000000
+    Size.Width = 300.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    Text = 
+      'In particular, look for changes in instance counts for the TSamp' +
+      'leFoo and TSampleBar classes.'
+  end
+end
