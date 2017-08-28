@@ -167,7 +167,7 @@ The GrijjyLogViewer displays messages that are sent from your app.  The Service 
 ![](http://i.imgur.com/pLa92Yw.png)
 
 # Installing the GrijjyCloudLogger
-To install the GrijjyCloudLogger you need to install a few repositories and add some Delphi library search paths.
+GrijjyCloudLogger is available in the Embarcadero GetIt Package Manager in RAD Studio, otherwise to install the GrijjyCloudLogger you need to install a few repositories and add some Delphi library search paths.
 
 #### 1. Download the following GitHub repositories,
 - GrijjyCloudLogger - https://github.com/grijjy/GrijjyCloudLogger
