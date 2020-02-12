@@ -40,7 +40,7 @@ begin
   {$IF Defined(IOS) or Defined(ANDROID)}
   FFilename := TPath.Combine(TPath.GetDocumentsPath, 'Settings.json');
   {$ELSE}
-  FFilename := TPath.Combine(TPath.GetHomePath, 'Grijjy/LogClientFMX/Settings.json');
+  FFilename := TPath.Combine(TPath.GetHomePath, string.Join(TPath.DirectorySeparatorChar,['Grijjy','LogClientFMX','Settings.json']));
   ForceDirectories(TPath.GetDirectoryName(FFilename));
   {$ENDIF}
 
