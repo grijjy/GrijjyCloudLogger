@@ -9,6 +9,12 @@
         <Projects Include="ExampleLogClient.Console\LogClientConsole.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="GrijjyLogBroker\GrijjyLogBroker.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="GrijjyLogViewer\GrijjyLogViewer.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -35,14 +41,32 @@
     <Target Name="LogClientConsole:Make">
         <MSBuild Projects="ExampleLogClient.Console\LogClientConsole.dproj" Targets="Make"/>
     </Target>
+    <Target Name="GrijjyLogBroker">
+        <MSBuild Projects="GrijjyLogBroker\GrijjyLogBroker.dproj"/>
+    </Target>
+    <Target Name="GrijjyLogBroker:Clean">
+        <MSBuild Projects="GrijjyLogBroker\GrijjyLogBroker.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GrijjyLogBroker:Make">
+        <MSBuild Projects="GrijjyLogBroker\GrijjyLogBroker.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GrijjyLogViewer">
+        <MSBuild Projects="GrijjyLogViewer\GrijjyLogViewer.dproj"/>
+    </Target>
+    <Target Name="GrijjyLogViewer:Clean">
+        <MSBuild Projects="GrijjyLogViewer\GrijjyLogViewer.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GrijjyLogViewer:Make">
+        <MSBuild Projects="GrijjyLogViewer\GrijjyLogViewer.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="LogClientFMX;LogClientConsole"/>
+        <CallTarget Targets="LogClientFMX;LogClientConsole;GrijjyLogBroker;GrijjyLogViewer"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="LogClientFMX:Clean;LogClientConsole:Clean"/>
+        <CallTarget Targets="LogClientFMX:Clean;LogClientConsole:Clean;GrijjyLogBroker:Clean;GrijjyLogViewer:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="LogClientFMX:Make;LogClientConsole:Make"/>
+        <CallTarget Targets="LogClientFMX:Make;LogClientConsole:Make;GrijjyLogBroker:Make;GrijjyLogViewer:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
